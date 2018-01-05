@@ -20,6 +20,7 @@ from calc import views as calc_views
 from tools import views as tools_views
 
 urlpatterns = [
+    url(r'^send_email/', tools_views.send_email, name='send_email'),
     url(r'^new_add/(\d+)/(\d+)/$', calc_views.add2, name='add2'),
     url(r'^add/(\d+)/(\d+)/$', calc_views.old_add2_redirect),
     url(r'^add/$', calc_views.add, name='add'),
